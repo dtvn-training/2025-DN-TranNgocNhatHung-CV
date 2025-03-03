@@ -31,8 +31,9 @@ body {
     padding: 20px 0;
 }
 
-.header__logo svg{
-    color:#6E07F3;
+.header__logo img{      
+    width: 90px;
+    height: 90px;
 }
 
 .nav {
@@ -151,7 +152,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8;
 }
-.skills__content--icon svg {
+.skills__content--icon img {
     width: 45px;
     height: 36px;
     color:#141c3a;
@@ -328,7 +329,7 @@ body {
     margin-right: 10px;
 }
 
-.projects__content--item-caption-link svg {
+.projects__content--item-caption-link img {
     width: 8px;
     height: 18px;
 }
@@ -368,7 +369,7 @@ body {
     margin-right: 10px;
 }
 
-.button-icon svg {
+.button-icon img {
     width: 20px;
     height: 20px;
 }
@@ -464,7 +465,7 @@ body {
 }
 
 
-.starups__content--link-icon svg {
+.starups__content--link-icon img {
     width: 16px;
     height: 16px;
     vertical-align: -3px;
@@ -645,10 +646,9 @@ input[name="carousel"] {
 
 .footer__content {  
     text-align: center;
-}
+}   
 
-.footer__logo svg{
-    color:#fff;
+.footer__logo img{
     width: 90px;
     height: 72px;
 
@@ -679,22 +679,15 @@ input[name="carousel"] {
     height: 47px;
     width: 47px;
     border: 2px solid rgba(255, 255, 255, 0.5);
+}   
+
+.footer__social--link:hover img {
+    opacity: 1; 
 }
 
-.footer__social--link:hover {
-    background-color: #fff;
-    border: 2px solid #fff;
-}
-
-.footer__social--link:hover svg {
-    color: #6E07F3;
-    opacity: 1;
-}
-
-.footer__social--link svg {
+.footer__social--link img {
     width: 24px;
     height: 19px;
-    color: #fff;
 }
 
 .footer__content--copyright {
@@ -705,7 +698,7 @@ input[name="carousel"] {
     opacity: 0.8;
 }
 
-.footer__content--copyright svg {
+.footer__content--copyright img {
     width: 18px;
     height: 18px;
     margin: 0 4px;

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.cdnfonts.com/css/europa-title" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__brand">
+            <div class="header__logo">
+              <span>
+                <img src="./assets/img/logo.svg" alt="" />
+              </span>
+            </div>
+            <div class="nav-list__icon">
+              <i class="fa-solid fa-bars btn__show nav__icon icon-visible"></i>
+              <i class="fa-solid fa-xmark btn__hide nav__icon icon-hidden"></i>
+            </div>
+          </div>
+
+          <div class="nav">
+            <div class="nav__item">
+              <span class="nav__item--link active" data-target="home">Home</span>
+            </div>
+            <div class="nav__item">
+              <span class="nav__item--link" data-target="about">About</span>
+            </div>
+            <div class="nav__item">
+              <span class="nav__item--link" data-target="skills">Skills</span>
+            </div>
+            <div class="nav__item">
+              <span class="nav__item--link" data-target="projects"
+                >Projects</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id = "home" class="section hero">
+      <h1 class="hero__title">Fullstack Developer</h1>
+      <h2 class="hero__subtitle">
+        I design and code beautifully simple things, and I love what I do.
+      </h2>
+      <img class="hero__avatar" src="./assets/img/avatar.svg" />
+      <img class="hero__devices" src="./assets/img/hero-devices.svg" alt="" />
+    </div>
+
+    <div id="about" class="section about">
+      <div class="container">
+        <div class="about__content">
+          <div class="about__content--container">
+            <p class="about__content--title">Hi, I’m Hung. Nice to meet you.</p>
+            <p class="about__content--subtitle">
+              My name is Trần Ngọc Nhật Hưng. I am a student at the University
+              of Science and Technology. I am passionate about web application
+              and software development. I have experience working with both
+              frontend and backend, using technologies such as JavaScript,
+              React, and Java. Always looking for opportunities to learn and
+              improve my programming skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="skills" class="section skills">
+      <div class="container">
+        <div class="skills__content">
+          <div class="skills__content--column">
+            <span class="skills__content--icon">
+              <img src="./assets/img/database.svg" alt="" />
+            </span>
+            <h1 class="skills__content--title">Database</h1>
+
+            <p class="skills__content--listtitle">Technology:</p>
+            <ul class="skills__content--list">
+              <li class="skills__content--item">MySQL</li>
+              <li class="skills__content--item">PostgreSQL</li>
+              <li class="skills__content--item">SQL Server</li>
+              <li class="skills__content--item">Firebase</li>
+            </ul>
+          </div>
+          <div class="skills__content--column">
+            <span class="skills__content--icon">
+              <img src="./assets/img/terminal.svg" alt="" />
+            </span>
+            <h1 class="skills__content--title">Frontend Developer</h1>
+
+            <p class="skills__content--listtitle">Languages I know:</p>
+            <p class="skills__content--item">HTML, CSS, JavaScript, ReactJS</p>
+            <p class="skills__content--listtitle">Dev Tools:</p>
+            <ul class="skills__content--list">
+              <li class="skills__content--item">Bootstrap</li>
+              <li class="skills__content--item">Github</li>
+              <li class="skills__content--item">Tailwind CSS</li>
+              <li class="skills__content--item">VS Code</li>
+            </ul>
+          </div>
+          <div class="skills__content--column">
+            <span class="skills__content--icon">
+              <img src="./assets/img/backend-coding.png" alt="" />
+            </span>
+            <h1 class="skills__content--title">Backend Developer</h1>
+
+            <p class="skills__content--listtitle">Languages I know:</p>
+            <p class="skills__content--item">Java, C#, PHP</p>
+            <p class="skills__content--listtitle">Frameworks, Dev Tools:</p>
+            <ul class="skills__content--list">
+              <li class="skills__content--item">Laravel</li>
+              <li class="skills__content--item">Spring Boot</li>
+              <li class="skills__content--item">Spring Security</li>
+              <li class="skills__content--item">Entity Framework</li>
+              <li class="skills__content--item">Cloudinary</li>
+              <li class="skills__content--item">Docker</li>
+              <li class="skills__content--item">Postman</li>
+            </ul>
+          </div>    
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="section projects">
+      <div class="container">
+        <div class="projects__content">
+          <h1 class="projects__content--title">My Recent Work</h1>
+          <p class="projects__content--subttile">
+            Here are a few past design projects I've worked on. Want to see
+            more? <a href="mailto:tranngocnhathung2207@gmail.com"> Email me.</a>
+          </p>
+
+          <div class="projects__content--list">
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/dac-san-hue-feature.jpeg"
+                />
+
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Hue specialties ecommerce
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/trantan66/focodo-ecommerce"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
+            </div>
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/Weather forecast website.png"
+                />
+
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Weather forecast website.
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/Anh-co-khi-bach-khoa/Weather-forecast.git"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
+            </div>
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/phone-store-management.webp"
+                />
+
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Phone store management system
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/Hung22072003/WinformPhoneManagement"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
+            </div>
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/facebook.jpg"
+                />
+
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Facebook clone mobile app.
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/nguyendong2003/FacebookClone"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
+            </div>
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/fruit-detection.jpg"
+                />
+
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Fruit detection mobile app.
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/nguyendong2003/PBL5_FruitDetection"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
+                </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="button">
+            <a class="button-link" href="">
+              <span class="button-icon">
+                <i class="fa-brands fa-dribbble"></i>
+              </span>
+              <span>See more on Dribbble</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clients">
+      <div class="container">
+        <div class="clients__content">
+          <div class="clients__content--title">
+            <h1>I'm proud to have collaborated with some awesome companies:</h1>
+          </div>
+          <div class="clients__content--list">
+            <div class="clients__content--item">
+              <img src="./assets/img/briteweb.svg" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/goodkind.svg" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/redstamp.svg" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/domain7.svg" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/designlab.png" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/chronicled.svg" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/bldrs.png" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/serpmetrics.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about" style="padding-bottom: 224px !important">
+      <div class="container">
+        <div class="about__content">
+          <div class="about__content--container">
+            <p class="about__content--title">My Startup Projects</p>
+            <p class="about__content--subtitle">
+              I'm a bit of a digital product junky. Over the years I've used
+              hundreds of web and mobile apps in different industries and
+              verticals. Eventually, I decided that it would be a fun challenge
+              to design and build my own.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="starups">
+      <div class="container">
+        <div class="starups__content">
+          <div class="starups__content--list">
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/bootstraplogos.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Affordable, human-crafted logos for startups and indie projects.
+              </p>
+              <a class="starups__content--link is-light" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/arrow-up-right.svg" alt="" />
+                </span>
+                bootstraplogos.com
+              </a>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/baselair.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Community platform for miniature painters to learn, connect, and
+                showcase work.
+              </p>
+              <a class="starups__content--link is-light" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/arrow-up-right.svg" alt="" />
+                </span>
+                thebaselair.com
+              </a>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/automalog.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                AI-driven changelog that turns git commits into release notes,
+                instantly.
+              </p>
+              <a class="starups__content--link is-light" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/arrow-up-right.svg" alt="" />
+                </span>
+                automalog.com
+              </a>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/shipable.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Short, focused design and growth collabs for startup tech
+                founders.
+              </p>
+              <a class="starups__content--link is-light" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/arrow-up-right.svg" alt="" />
+                </span>
+                shipable.io
+              </a>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/houston.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Simple feedback and engagement tools that help teams ship
+                winning products.
+              </p>
+              <span class="starups__content--link is-danger" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/circle-pause.svg" alt="" />
+                </span>
+                on hold
+              </span>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/kybercore.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Next level plug and play chassis systems for custom DIY
+                lightsaber builds.
+              </p>
+              <span class="starups__content--link is-danger" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/circle-pause.svg" alt="" />
+                </span>
+                on hold
+              </span>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/basin.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                A powerful, easy-to-configure form backend for designers and
+                developers.
+              </p>
+              <span class="starups__content--link is-success" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/handshake.svg" alt="" />
+                </span>
+                exited in 2024
+              </span>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/dovetail.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                A space and member management solution for coworking
+                communities.
+              </p>
+              <span class="starups__content--link is-success" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/handshake.svg" alt="" />
+                </span>
+                acquired in 2017
+              </span>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/userforge.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                A collaborative tool for creating simple, effective user
+                personas.
+              </p>
+              <span class="starups__content--link is-success" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/handshake.svg" alt="" />
+                </span>
+                acquired in 2016
+              </span>
+            </div>
+          </div>
+
+          <div class="starups__content--callout">
+            <h1 class="starups__content--title">
+              Interested in collaborating with me?
+            </h1>
+            <p class="starups__content--subtitle">
+              I’m always open to discussing product design work or partnership
+              opportunities.
+            </p>
+
+            <div class="button">
+              <a class="button-link" href="">
+                <span>Start a conversation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials">
+      <div class="container">
+        <div class="testimonials__content">
+          <input type="radio" id="carousel-1" name="carousel" checked />
+          <input type="radio" id="carousel-2" name="carousel" />
+
+          <h1 class="testimonials__content--title">Testimonials</h1>
+          <p class="testimonials__content--subtitle">
+            People I've worked with have said some nice things...
+          </p>
+          <div class="testimonials__content--carousel">
+            <div class="testimonials__content--inner">
+              <div class="testimonials__content--item">
+                <img
+                  class="testimonials__content--item-img"
+                  src="./assets/img/pascal.png"
+                />
+                <p class="testimonials__content--description">
+                  “Matt was a real pleasure to work with and we look forward to
+                  working with him again. He’s definitely the kind of designer
+                  you can trust with a project from start to finish.”
+                </p>
+                <h1 class="testimonials__content--item-title">
+                  Pascal Tremblay
+                </h1>
+                <p class="testimonials__content--item-subtitle">
+                  Creative Lead, Good Kind
+                </p>
+              </div>
+              <div class="testimonials__content--item">
+                <img
+                  class="testimonials__content--item-img"
+                  src="./assets/img/alvin.png"
+                />
+                <p class="testimonials__content--description">
+                  “Matt's a clear communicator with the tenacity and confidence
+                  to really dig in to tricky design scenarios and the
+                  collaborative friction that's needed to produce excellent
+                  work.”
+                </p>
+                <h1 class="testimonials__content--item-title">Alvin Engler</h1>
+                <p class="testimonials__content--item-subtitle">
+                  CEO, West Third Enterprises, Inc.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__content--nav">
+            <label
+              for="carousel-1"
+              class="testimonials__content--nav-dot"
+              for=""
+            ></label>
+            <label
+              for="carousel-2"
+              class="testimonials__content--nav-dot"
+              for=""
+            ></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="actions">
+      <div class="container">
+        <div class="actions__content">
+          <div class="actions__content--box">
+            <h1 class="actions__content--title">Start a project</h1>
+            <p class="actions__content--description">
+              Interested in working together? We should queue up a time to chat.
+              I’ll buy the coffee.
+            </p>
+            <div class="actions__content--button">
+              <a href="" class="actions__content--link">
+                <span>Let's do this</span>
+              </a>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <a href="">
+              <img src="./assets/img/white-logo.svg" alt="" />
+            </a>
+          </div>
+
+          <p class="footer__content--description">
+            Living, learning, & leveling up one day at a time.
+          </p>
+
+          <div class="footer__social">
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/twitter.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/white-dribbble.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/linkedin-in.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/indie-hackers.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/product-hunt.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/envelope.svg" alt="" />
+            </a>
+          </div>
+          <p class="footer__content--copyright">
+            Handcrafted by me
+            <img src="./assets/img/copyright.svg" alt="" /> twentytwentyfour
+          </p>
+
+          <a href="" class="footer__content--attribution">
+            <img src="./assets/img/made-with-bulma--white.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,534 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.cdnfonts.com/css/europa-title" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const btnShow = document.querySelector(".btn__show");
-            const btnHide = document.querySelector(".btn__hide");
-            const nav = document.querySelector(".nav");
-            const btnLogo = document.querySelector(".header__logo");
-            const navLinks = document.querySelectorAll(".nav__item--link");
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.cdnfonts.com/css/europa-title" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__brand">
+            <div class="header__logo">
+              <span>
+                <img src="./assets/img/logo.svg" alt="" />
+              </span>
+            </div>
+            <div class="nav-list__icon">
+              <i class="fa-solid fa-bars btn__show nav__icon icon-visible"></i>
+              <i class="fa-solid fa-xmark btn__hide nav__icon icon-hidden"></i>
+            </div>
+          </div>
 
-            btnShow.addEventListener("click", function () {
-                nav.classList.add("nav__visible");  
-                btnShow.classList.add("icon-hidden");  
-                btnShow.classList.remove("icon-visible");  
-                btnHide.classList.remove("icon-hidden");  
-                btnHide.classList.add("icon-visible");
-            });
+          <div class="nav">
+            <div class="nav__item">
+              <span class="nav__item--link active" data-target="home">Home</span>
+            </div>
+            <div class="nav__item">
+              <span class="nav__item--link" data-target="about">About</span>
+            </div>
+            <div class="nav__item">
+              <span class="nav__item--link" data-target="skills">Skills</span>
+            </div>
+            <div class="nav__item">
+              <span class="nav__item--link" data-target="projects"
+                >Projects</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            btnHide.addEventListener("click", function () {
-                nav.classList.remove("nav__visible");  
-                btnHide.classList.add("icon-hidden");  
-                btnHide.classList.remove("icon-visible");
-                btnShow.classList.remove("icon-hidden");  
-                btnShow.classList.add("icon-visible");   
-            });
+    <div id = "home" class="section hero">
+      <h1 class="hero__title">Fullstack Developer</h1>
+      <h2 class="hero__subtitle">
+        I design and code beautifully simple things, and I love what I do.
+      </h2>
+      <img class="hero__avatar" src="./assets/img/avatar.svg" />
+      <img class="hero__devices" src="./assets/img/hero-devices.svg" alt="" />
+    </div>
 
-            btnLogo.addEventListener("click", function () {
-                window.scrollTo({ 
-                    top: 0,
-                    behavior: "smooth" 
-                });
-            })
+    <div id="about" class="section about">
+      <div class="container">
+        <div class="about__content">
+          <div class="about__content--container">
+            <p class="about__content--title">Hi, I’m Hung. Nice to meet you.</p>
+            <p class="about__content--subtitle">
+              My name is Trần Ngọc Nhật Hưng. I am a student at the University
+              of Science and Technology. I am passionate about web application
+              and software development. I have experience working with both
+              frontend and backend, using technologies such as JavaScript,
+              React, and Java. Always looking for opportunities to learn and
+              improve my programming skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            navLinks.forEach(link => {
-            link.addEventListener("click", function () {
-                navLinks.forEach(link => link.classList.remove("active"));
-                this.classList.add("active");
-                const targetId = this.getAttribute("data-target");
-                if (targetId === "home") {
-                    window.scrollTo({ 
-                        top: 0,
-                        behavior: "smooth" 
-                    });
-                } else {
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        window.scrollTo({ 
-                            top: (targetElement.offsetTop - 50),
-                            behavior: "smooth" 
-                        });
-                    }
-                }
+    <div id="skills" class="section skills">
+      <div class="container">
+        <div class="skills__content">
+          <div class="skills__content--column">
+            <span class="skills__content--icon">
+              <img src="./assets/img/database.svg" alt="" />
+            </span>
+            <h1 class="skills__content--title">Database</h1>
 
-                if (window.innerWidth <= 1024) {
-                    nav.classList.remove("nav__visible");
-                    btnHide.classList.add("icon-hidden");
-                    btnHide.classList.remove("icon-visible");
-                    btnShow.classList.remove("icon-hidden");
-                    btnShow.classList.add("icon-visible");
-                }
-            });
-        });
-        }); 
-    </script>
-    
-</head>
-<body>
-        <div class = "header">
-            <div class = "container">
-                <div class = "header__content">
-                        <div class = "header__brand">
-                            <div class = "header__logo">
-                                <span>
-                                    <img src="./assets/img/logo.svg" alt="">
-                                </span>
-                            </div>
-                            <div class = "nav-list__icon">
-                                <i class="fa-solid fa-bars btn__show nav__icon icon-visible"></i>
-                                <i class="fa-solid fa-xmark btn__hide nav__icon icon-hidden"></i>
-                            </div>
-                        </div>  
-            
-                        <div class = "nav">
-                            <div class = "nav__item"><span class = "nav__item--link" data-target="home">Home</span></div>
-                            <div class = "nav__item"><span class = "nav__item--link" data-target="about">About</span></div>
-                            <div class = "nav__item"><span class = "nav__item--link" data-target="skills">Skills</span></div>
-                            <div class = "nav__item"><span class = "nav__item--link" data-target="projects">Projects</span></div>
-                        </div>
+            <p class="skills__content--listtitle">Technology:</p>
+            <ul class="skills__content--list">
+              <li class="skills__content--item">MySQL</li>
+              <li class="skills__content--item">PostgreSQL</li>
+              <li class="skills__content--item">SQL Server</li>
+              <li class="skills__content--item">Firebase</li>
+            </ul>
+          </div>
+          <div class="skills__content--column">
+            <span class="skills__content--icon">
+              <img src="./assets/img/terminal.svg" alt="" />
+            </span>
+            <h1 class="skills__content--title">Frontend Developer</h1>
+
+            <p class="skills__content--listtitle">Languages I know:</p>
+            <p class="skills__content--item">HTML, CSS, JavaScript, ReactJS</p>
+            <p class="skills__content--listtitle">Dev Tools:</p>
+            <ul class="skills__content--list">
+              <li class="skills__content--item">Bootstrap</li>
+              <li class="skills__content--item">Github</li>
+              <li class="skills__content--item">Tailwind CSS</li>
+              <li class="skills__content--item">VS Code</li>
+            </ul>
+          </div>
+          <div class="skills__content--column">
+            <span class="skills__content--icon">
+              <img src="./assets/img/backend-coding.png" alt="" />
+            </span>
+            <h1 class="skills__content--title">Backend Developer</h1>
+
+            <p class="skills__content--listtitle">Languages I know:</p>
+            <p class="skills__content--item">Java, C#, PHP</p>
+            <p class="skills__content--listtitle">Frameworks, Dev Tools:</p>
+            <ul class="skills__content--list">
+              <li class="skills__content--item">Laravel</li>
+              <li class="skills__content--item">Spring Boot</li>
+              <li class="skills__content--item">Spring Security</li>
+              <li class="skills__content--item">Entity Framework</li>
+              <li class="skills__content--item">Cloudinary</li>
+              <li class="skills__content--item">Docker</li>
+              <li class="skills__content--item">Postman</li>
+            </ul>
+          </div>    
+        </div>
+      </div>
+    </div>
+
+    <div id="projects" class="section projects">
+      <div class="container">
+        <div class="projects__content">
+          <h1 class="projects__content--title">My Recent Work</h1>
+          <p class="projects__content--subttile">
+            Here are a few past design projects I've worked on. Want to see
+            more? <a href="mailto:tranngocnhathung2207@gmail.com"> Email me.</a>
+          </p>
+
+          <div class="projects__content--list">
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/dac-san-hue-feature.jpeg"
+                />
+
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Hue specialties ecommerce
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/trantan66/focodo-ecommerce"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
                 </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
             </div>
-        </div>
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/Weather forecast website.png"
+                />
 
-        <div class = "hero">
-            <h1 class = "hero__title">Fullstack Developer</h1>
-            <h2 class = "hero__subtitle">I design and code beautifully simple things, and I love what I do.</h2>
-            <img class = "hero__avatar" src = "./assets/img/avatar.svg"/>
-            <img class = "hero__devices" src="./assets/img/hero-devices.svg" alt="">
-        </div>
-
-        <div id = "about" class = "about">
-            <div class = "container">
-                <div class = "about__content">
-                    <div class = "about__content--container">
-                        <p class = "about__content--title">Hi, I’m Hung. Nice to meet you.</p>
-                        <p class = "about__content--subtitle">My name is Trần Ngọc Nhật Hưng. I am a student at the University of Science and Technology. I am passionate about web application and software development. I have experience working with both frontend and backend, using technologies such as JavaScript, React, and Java. Always looking for opportunities to learn and improve my programming skills.</p>     
-                    </div>
-                </div>   
-            </div>
-        </div>
-        
-
-        <div id="skills" class = "skills">
-            <div class = "container">
-                <div class = "skills__content">
-                    <div class = "skills__content--column">
-                        <span class = "skills__content--icon">
-                            <img src="./assets/img/database.svg" alt="">
-                        </span>
-                        <h1 class = "skills__content--title">Database</h1>
-
-                        <p class = "skills__content--listtitle">Technology:</p>   
-                        <ul class = "skills__content--list">
-                            <li class = "skills__content--item">MySQL</li>
-                            <li class = "skills__content--item">PostgreSQL</li>
-                            <li class = "skills__content--item">SQL Server</li>
-                            <li class = "skills__content--item">Firebase</li>
-                        </ul>
-                    </div>
-                    <div class = "skills__content--column">
-                        <span class = "skills__content--icon">
-                           <img src="./assets/img/terminal.svg" alt="">
-                        </span> 
-                        <h1 class = "skills__content--title">Frontend Developer</h1>
-
-                        <p class = "skills__content--listtitle">Languages I know:</p>   
-                        <p class = "skills__content--item">HTML, CSS, JavaScript, ReactJS</p>  
-                        <p class = "skills__content--listtitle">Dev Tools:</p>   
-                        <ul class = "skills__content--list">
-                            <li class = "skills__content--item">Bootstrap</li>
-                            <li class = "skills__content--item">Github</li>
-                            <li class = "skills__content--item">Tailwind CSS</li>
-                            <li class = "skills__content--item">VS Code</li>
-                        </ul>
-                    </div>
-                    <div class = "skills__content--column">
-                        <span class = "skills__content--icon">
-                            <img src="./assets/img/backend-coding.png" alt="">
-                        </span>
-                        <h1 class = "skills__content--title">Backend Developer</h1>
-
-                        <p class = "skills__content--listtitle">Languages I know:</p>   
-                        <p class = "skills__content--item">Java, C#, PHP</p>  
-                        <p class = "skills__content--listtitle">Frameworks, Dev Tools:</p>   
-                        <ul class = "skills__content--list">
-                            <li class = "skills__content--item">Laravel</li>
-                            <li class = "skills__content--item">Spring Boot</li>
-                            <li class = "skills__content--item">Spring Security</li>
-                            <li class = "skills__content--item">Entity Framework</li>
-                            <li class = "skills__content--item">Cloudinary</li>
-                            <li class = "skills__content--item">Docker</li>
-                            <li class = "skills__content--item">Postman</li>
-                        </ul>
-                    </div>
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Weather forecast website.
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/Anh-co-khi-bach-khoa/Weather-forecast.git"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
                 </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
             </div>
-        </div>
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/phone-store-management.webp"
+                />
 
-        <div id="projects" class = "projects">
-            <div class = "container">
-                <div class = "projects__content">
-                    <h1 class = "projects__content--title">My Recent Work</h1>
-                    <p class = "projects__content--subttile">Here are a few past design projects I've worked on. Want to see more? <a href=""> Email me.</a></p>
-
-                    <div class = "projects__content--list">
-                        <div class = "projects__content--item">
-                            <div class = "projects__content--item-container">
-                                <img  class = "projects__content--img" src = "./assets/img/dac-san-hue-feature.jpeg"/>
-                                
-                                <div class = "projects__content--item-caption">
-                                    <p class = "projects__content--item-caption-title">Hue specialties ecommerce</p>
-                                    <a class = "projects__content--item-caption-link" href="https://github.com/trantan66/focodo-ecommerce" target="_blank">
-                                        <span>Visit Github</span>
-                                        <span class = "projects__content--item-caption-icon">
-                                            <img src="./assets/img/angle-right.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
-
-                                <div class = "projects__content--item-caption-overlay"></div>
-                            </div>
-                        </div>
-                        <div class = "projects__content--item">
-                            <div class = "projects__content--item-container">
-                                <img  class = "projects__content--img" src = "./assets/img/Weather forecast website.png"/>
-                                
-                                <div class = "projects__content--item-caption">
-                                    <p class = "projects__content--item-caption-title">Weather forecast website.</p>
-                                    <a class = "projects__content--item-caption-link" href="https://github.com/Anh-co-khi-bach-khoa/Weather-forecast.git" target="_blank">
-                                        <span>Visit Github</span>
-                                        <span class = "projects__content--item-caption-icon">
-                                            <img src="./assets/img/angle-right.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
-
-                                <div class = "projects__content--item-caption-overlay"></div>
-                            </div>
-                        </div>
-                        <div class = "projects__content--item">
-                            <div class = "projects__content--item-container">
-                                <img  class = "projects__content--img" src = "./assets/img/phone-store-management.webp"/>
-                                
-                                <div class = "projects__content--item-caption">
-                                    <p class = "projects__content--item-caption-title">Phone store management system</p>
-                                    <a class = "projects__content--item-caption-link" href="https://github.com/Hung22072003/WinformPhoneManagement" target="_blank">
-                                        <span>Visit Github</span>
-                                        <span class = "projects__content--item-caption-icon">
-                                            <img src="./assets/img/angle-right.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
-
-                                <div class = "projects__content--item-caption-overlay"></div>
-                            </div>
-                        </div>
-                        <div class = "projects__content--item">
-                            <div class = "projects__content--item-container">
-                                <img  class = "projects__content--img" src = "./assets/img/facebook.jpg"/>
-                                
-                                <div class = "projects__content--item-caption">
-                                    <p class = "projects__content--item-caption-title">Facebook clone mobile app.</p>
-                                    <a class = "projects__content--item-caption-link" href="https://github.com/nguyendong2003/FacebookClone" target="_blank">
-                                        <span>Visit Github</span>
-                                        <span class = "projects__content--item-caption-icon">
-                                            <img src="./assets/img/angle-right.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
-
-                                <div class = "projects__content--item-caption-overlay"></div>
-                            </div>
-                        </div>
-                        <div class = "projects__content--item">
-                            <div class = "projects__content--item-container">
-                                <img  class = "projects__content--img" src = "./assets/img/fruit-detection.jpg"/>
-                                
-                                <div class = "projects__content--item-caption">
-                                    <p class = "projects__content--item-caption-title">Fruit detection mobile app.</p>
-                                    <a class = "projects__content--item-caption-link" href="https://github.com/nguyendong2003/PBL5_FruitDetection" target="_blank">
-                                        <span>Visit Github</span>
-                                        <span class = "projects__content--item-caption-icon">
-                                            <img src="./assets/img/angle-right.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
-
-                                <div class = "projects__content--item-caption-overlay"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class = "button">
-                        <a class = "button-link" href="">
-                            <span class = "button-icon">
-                                <svg class="svg-inline--fa fa-dribbble" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="dribbble" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119.252 8 8 119.252 8 256s111.252 248 248 248 248-111.252 248-248S392.748 8 256 8zm163.97 114.366c29.503 36.046 47.369 81.957 47.835 131.955-6.984-1.477-77.018-15.682-147.502-6.818-5.752-14.041-11.181-26.393-18.617-41.614 78.321-31.977 113.818-77.482 118.284-83.523zM396.421 97.87c-3.81 5.427-35.697 48.286-111.021 76.519-34.712-63.776-73.185-116.168-79.04-124.008 67.176-16.193 137.966 1.27 190.061 47.489zm-230.48-33.25c5.585 7.659 43.438 60.116 78.537 122.509-99.087 26.313-186.36 25.934-195.834 25.809C62.38 147.205 106.678 92.573 165.941 64.62zM44.17 256.323c0-2.166.043-4.322.108-6.473 9.268.19 111.92 1.513 217.706-30.146 6.064 11.868 11.857 23.915 17.174 35.949-76.599 21.575-146.194 83.527-180.531 142.306C64.794 360.405 44.17 310.73 44.17 256.323zm81.807 167.113c22.127-45.233 82.178-103.622 167.579-132.756 29.74 77.283 42.039 142.053 45.189 160.638-68.112 29.013-150.015 21.053-212.768-27.882zm248.38 8.489c-2.171-12.886-13.446-74.897-41.152-151.033 66.38-10.626 124.7 6.768 131.947 9.055-9.442 58.941-43.273 109.844-90.795 141.978z"></path></svg>
-                            </span>
-                            <span>See more on Dribbble</span>
-                        </a>
-                    </div>
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Phone store management system
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/Hung22072003/WinformPhoneManagement"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
                 </div>
-            </div>
-        </div>
 
-        <div class = "clients">
-            <div class = "container">
-                <div class = "clients__content">
-                    <div class = "clients__content--title">
-                        <h1>I'm proud to have collaborated with some awesome companies:</h1>
-                    </div>
-                    <div class = "clients__content--list">
-                        <div class = "clients__content--item">
-                            <img src="./assets/img/briteweb.svg" alt="">
-                        </div>
-                        <div class = "clients__content--item">
-                            <img src="./assets/img/goodkind.svg" alt="">
-                        </div>
-                        <div class = "clients__content--item">
-                            <img src="./assets/img/redstamp.svg" alt="">
-                        </div>
-                        <div class = "clients__content--item">
-                            <img src="./assets/img/domain7.svg" alt="">
-                        </div>
-                        <div class = "clients__content--item">
-                            <img src="./assets/img/designlab.png" alt="">
-                        </div>
-                        <div class = "clients__content--item">
-                            <img src="./assets/img/chronicled.svg" alt="">
-                        </div>
-                        <div class = "clients__content--item">
-                            <img src="./assets/img/bldrs.png" alt="">
-                        </div>
-                        <div class = "clients__content--item">
-                            <img src="./assets/img/serpmetrics.svg" alt="">
-                        </div>
-                    </div>
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
+            </div>
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/facebook.jpg"
+                />
+
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Facebook clone mobile app.
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/nguyendong2003/FacebookClone"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
                 </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
             </div>
-        </div>
+            <div class="projects__content--item">
+              <div class="projects__content--item-container">
+                <img
+                  class="projects__content--img"
+                  src="./assets/img/fruit-detection.jpg"
+                />
 
-        <div class = "about"  style = "padding-bottom: 224px !important;">
-            <div class = "container">
-                <div class = "about__content">
-                    <div class = "about__content--container">
-                        <p class = "about__content--title">My Startup Projects</p>
-                        <p class = "about__content--subtitle">I'm a bit of a digital product junky. Over the years I've used hundreds of web and mobile apps in different industries and verticals. Eventually, I decided that it would be a fun challenge to design and build my own.</p>     
-                    </div>
-                </div>   
-            </div>
-        </div>
-
-        <div class = "starups">
-            <div class = "container">
-                <div class = "starups__content">   
-                    <div class = "starups__content--list">
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/bootstraplogos.svg" alt="">
-                            <p class = "starups__content--description">Affordable, human-crafted logos for startups and indie projects.</p>
-                            <a class = "starups__content--link is-light" href="">
-                                <span class = "starups__content--link-icon">
-                                    <img src="./assets/img/arrow-up-right.svg" alt="">
-                                </span>
-                                bootstraplogos.com
-                            </a>
-                        </div>
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/baselair.svg" alt="">
-                            <p class = "starups__content--description">Community platform for miniature painters to learn, connect, and showcase work.</p>
-                            <a class = "starups__content--link is-light" href="">
-                                <span class = "starups__content--link-icon">
-                                    <img src="./assets/img/arrow-up-right.svg" alt="">
-                                </span>
-                                thebaselair.com
-                            </a>
-                        </div>
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/automalog.svg" alt="">
-                            <p class = "starups__content--description">AI-driven changelog that turns git commits into release notes, instantly.</p>
-                            <a class = "starups__content--link is-light" href="">
-                                <span class = "starups__content--link-icon">
-                                    <img src="./assets/img/arrow-up-right.svg" alt="">
-                                </span>
-                                automalog.com
-                            </a>
-                        </div>
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/shipable.svg" alt="">
-                            <p class = "starups__content--description">Short, focused design and growth collabs for startup tech founders.</p>
-                            <a class = "starups__content--link is-light" href="">
-                                <span class = "starups__content--link-icon">
-                                    <img src="./assets/img/arrow-up-right.svg" alt="">
-                                </span>
-                                shipable.io
-                            </a>
-                        </div>
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/houston.svg" alt="">
-                            <p class = "starups__content--description">Simple feedback and engagement tools that help teams ship winning products.</p>
-                            <span class = "starups__content--link is-danger" href="">
-                                <span class = "starups__content--link-icon">
-                                    <img src="./assets/img/circle-pause.svg" alt="">
-                                </span>
-                                on hold
-                            </span>
-                        </div>
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/kybercore.svg" alt="">
-                            <p class = "starups__content--description">Next level plug and play chassis systems for custom DIY lightsaber builds.   </p>
-                            <span class = "starups__content--link is-danger" href="">
-                                <span class = "starups__content--link-icon">
-                                    <img src="./assets/img/circle-pause.svg" alt="">
-                                </span>
-                                on hold
-                            </span>
-                        </div>
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/basin.svg" alt="">
-                            <p class = "starups__content--description">A powerful, easy-to-configure form backend for designers and developers.</p>
-                            <span class = "starups__content--link is-success" href="">
-                                <span class = "starups__content--link-icon">
-                                   <img src="./assets/img/handshake.svg" alt="">
-                                </span>
-                                exited in 2024
-                            </span>
-                        </div>
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/dovetail.svg" alt="">
-                            <p class = "starups__content--description">A space and member management solution for coworking communities.</p>
-                            <span class = "starups__content--link is-success" href="">
-                                <span class = "starups__content--link-icon">
-                                   <img src="./assets/img/handshake.svg" alt="">
-                                </span>
-                                acquired in 2017
-                            </span>
-                        </div>
-                        <div class = "starups__content--item">
-                            <img class = "starups__content--img" src="./assets/img/userforge.svg" alt="">
-                            <p class = "starups__content--description">A collaborative tool for creating simple, effective user personas.</p>
-                            <span class = "starups__content--link is-success" href="">
-                                <span class = "starups__content--link-icon">
-                                   <img src="./assets/img/handshake.svg" alt="">
-                                </span>
-                                acquired in 2016
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="starups__content--callout">
-                        <h1 class="starups__content--title">Interested in collaborating with me?</h1>
-                        <p class="starups__content--subtitle" >I’m always open to discussing product design work or partnership opportunities.</p>
-
-                        <div class = "button">
-                            <a class = "button-link" href="">
-                                <span class = "button-icon">
-                                    <svg class="svg-inline--fa fa-message-lines" aria-hidden="true" focusable="false" data-prefix="far" data-icon="message-lines" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M208 416c0-26.5-21.5-48-48-48l-96 0c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l384 0c8.8 0 16 7.2 16 16l0 288c0 8.8-7.2 16-16 16l-138.7 0c-10.4 0-20.5 3.4-28.8 9.6L208 432l0-16zm-.2 76.2l.2-.2 101.3-76L448 416c35.3 0 64-28.7 64-64l0-288c0-35.3-28.7-64-64-64L64 0C28.7 0 0 28.7 0 64L0 352c0 35.3 28.7 64 64 64l48 0 48 0 0 48 0 4 0 .3 0 6.4 0 21.3c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L202.7 496l5.1-3.8zM152 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l208 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-208 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-112 0z"></path></svg>
-                                </span>
-                                <span>Start a conversation</span>
-                            </a>
-                        </div>
-                    </div>
+                <div class="projects__content--item-caption">
+                  <p class="projects__content--item-caption-title">
+                    Fruit detection mobile app.
+                  </p>
+                  <a
+                    class="projects__content--item-caption-link"
+                    href="https://github.com/nguyendong2003/PBL5_FruitDetection"
+                    target="_blank"
+                  >
+                    <span>Visit Github</span>
+                    <span class="projects__content--item-caption-icon">
+                      <img src="./assets/img/angle-right.svg" alt="" />
+                    </span>
+                  </a>
                 </div>
+
+                <div class="projects__content--item-caption-overlay"></div>
+              </div>
             </div>
+          </div>
+
+          <div class="button">
+            <a class="button-link" href="">
+              <span class="button-icon">
+                <i class="fa-brands fa-dribbble"></i>
+              </span>
+              <span>See more on Dribbble</span>
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class = "testimonials">
-            <div class="container">
-                <div class="testimonials__content">
-
-                    <input type="radio" id="carousel-1" name = "carousel" checked/>
-                    <input type="radio" id="carousel-2" name = "carousel"/>
-
-                    <h1 class="testimonials__content--title">Testimonials</h1>
-                    <p class="testimonials__content--subtitle">People I've worked with have said some nice things...</p>
-                    <div class="testimonials__content--carousel">
-                        <div class="testimonials__content--inner">
-                            <div class="testimonials__content--item">
-                                <img  class="testimonials__content--item-img" src = "./assets/img/pascal.png" />
-                                <p class="testimonials__content--description"> “Matt was a real pleasure to work with and we look forward to working with him again. He’s definitely the kind of designer you can trust with a project from start to finish.”</p>
-                                <h1 class="testimonials__content--item-title">Pascal Tremblay</h1>
-                                <p class="testimonials__content--item-subtitle">Creative Lead, Good Kind</p>
-                            </div>
-                            <div class="testimonials__content--item">
-                                <img  class="testimonials__content--item-img" src = "./assets/img/alvin.png" />
-                                <p class="testimonials__content--description"> “Matt's a clear communicator with the tenacity and confidence to really dig in to tricky design scenarios and the collaborative friction that's needed to produce excellent work.”</p>
-                                <h1 class="testimonials__content--item-title">Alvin Engler</h1>
-                                <p class="testimonials__content--item-subtitle">CEO, West Third Enterprises, Inc.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class = "testimonials__content--nav">
-                        <label for = "carousel-1" class = "testimonials__content--nav-dot" for=""></label>
-                        <label for = "carousel-2" class = "testimonials__content--nav-dot" for=""></label>
-                    </div>
-                </div>
+    <div class="clients">
+      <div class="container">
+        <div class="clients__content">
+          <div class="clients__content--title">
+            <h1>I'm proud to have collaborated with some awesome companies:</h1>
+          </div>
+          <div class="clients__content--list">
+            <div class="clients__content--item">
+              <img src="./assets/img/briteweb.svg" alt="" />
             </div>
-        </div>
-
-        <div id="contact" class = "actions">
-            <div class="container">
-                <div class="actions__content">
-                    <div class = "actions__content--box">
-                        <h1 class = "actions__content--title">Start a project</h1>
-                        <p class = "actions__content--description">Interested in working together? We should queue up a time to chat. I’ll buy the coffee.</p>
-                        <div class = "actions__content--button">
-                            <a href=""  class = "actions__content--link">
-                                <svg class="svg-inline--fa fa-hand-horns actions__content--icon" aria-hidden="true" focusable="false" data-prefix="far" data-icon="hand-horns" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M80 48c8.8 0 16 7.2 16 16l0 144 0 32-16 0c-5.5 0-10.8 .6-16 1.6L64 64c0-8.8 7.2-16 16-16zM16 64l0 208C6 285.4 0 302 0 320c0 0 0 0 0 0l0 24c0 92.8 75.2 168 168 168l48 0c92.8 0 168-75.2 168-168l0-56 0-32 0-128c0-35.3-28.7-64-64-64s-64 28.7-64 64l0 50c-5.1-1.3-10.5-2-16-2c-7.9 0-15.4 1.4-22.4 4c-10.4-21.3-32.3-36-57.6-36c-5.5 0-10.9 .7-16 2l0-82c0-35.3-28.7-64-64-64S16 28.7 16 64zM336 256l0 32 0 56c0 66.3-53.7 120-120 120l-48 0c-66.3 0-120-53.7-120-120l0-24s0 0 0 0c0-17.7 14.3-32 32-32l40 0 40 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-40 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l40 0c15.1 0 29-5.3 40-14c11 8.8 24.9 14 40 14c35.3 0 64-28.7 64-64l0-48 0-16 0-112c0-8.8 7.2-16 16-16s16 7.2 16 16l0 128zM160 240l-16 0 0-32c0-8.8 7.2-16 16-16s16 7.2 16 16l0 32 0 2c-5.1-1.3-10.5-2-16-2zm96 16l0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-40 0-24c0-8.8 7.2-16 16-16s16 7.2 16 16l0 16z"></path></svg>
-                                <span>Let's do this</span>  
-                            </a>        
-                        </div>
-                    </div>
-                </div>
-            </div>        
-        </div>
-
-        <div class = "footer">
-            <div class="container">
-                <div class="footer__content">
-                    <div class = "footer__logo">
-                        <a href="">
-                            <img src="./assets/img/white-logo.svg" alt="">
-                        </a>
-                    </div>
-
-                    <p class = "footer__content--description">Living, learning, & leveling up one day at a time.</p>
-
-                    <div class = "footer__social">
-                        <a href="" class = "footer__social--link">
-                            <img src="./assets/img/twitter.svg" alt="">
-                        </a>
-                        <a href="" class = "footer__social--link">
-                            <img src="./assets/img/white-dribbble.svg" alt="">
-                        </a>
-                        <a href="" class = "footer__social--link">
-                            <img src="./assets/img/linkedin-in.svg" alt="">
-                        </a>
-                        <a href="" class = "footer__social--link">
-                            <img src="./assets/img/indie-hackers.svg" alt="">
-                        </a>
-                        <a href="" class = "footer__social--link">
-                            <img src="./assets/img/product-hunt.svg" alt="">
-                        </a>
-                        <a href="" class = "footer__social--link">
-                            <img src="./assets/img/envelope.svg" alt="">
-                        </a>
-                    </div>   
-                    <p class = "footer__content--copyright">Handcrafted by me <img src="./assets/img/copyright.svg" alt=""> twentytwentyfour</p>
-                
-                    <a href="" class = "footer__content--attribution">
-                        <img src="./assets/img/made-with-bulma--white.png" alt="">
-                    </a>
-                </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/goodkind.svg" alt="" />
             </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/redstamp.svg" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/domain7.svg" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/designlab.png" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/chronicled.svg" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/bldrs.png" alt="" />
+            </div>
+            <div class="clients__content--item">
+              <img src="./assets/img/serpmetrics.svg" alt="" />
+            </div>
+          </div>
         </div>
-</body>
+      </div>
+    </div>
+
+    <div class="about" style="padding-bottom: 224px !important">
+      <div class="container">
+        <div class="about__content">
+          <div class="about__content--container">
+            <p class="about__content--title">My Startup Projects</p>
+            <p class="about__content--subtitle">
+              I'm a bit of a digital product junky. Over the years I've used
+              hundreds of web and mobile apps in different industries and
+              verticals. Eventually, I decided that it would be a fun challenge
+              to design and build my own.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="starups">
+      <div class="container">
+        <div class="starups__content">
+          <div class="starups__content--list">
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/bootstraplogos.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Affordable, human-crafted logos for startups and indie projects.
+              </p>
+              <a class="starups__content--link is-light" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/arrow-up-right.svg" alt="" />
+                </span>
+                bootstraplogos.com
+              </a>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/baselair.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Community platform for miniature painters to learn, connect, and
+                showcase work.
+              </p>
+              <a class="starups__content--link is-light" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/arrow-up-right.svg" alt="" />
+                </span>
+                thebaselair.com
+              </a>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/automalog.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                AI-driven changelog that turns git commits into release notes,
+                instantly.
+              </p>
+              <a class="starups__content--link is-light" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/arrow-up-right.svg" alt="" />
+                </span>
+                automalog.com
+              </a>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/shipable.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Short, focused design and growth collabs for startup tech
+                founders.
+              </p>
+              <a class="starups__content--link is-light" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/arrow-up-right.svg" alt="" />
+                </span>
+                shipable.io
+              </a>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/houston.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Simple feedback and engagement tools that help teams ship
+                winning products.
+              </p>
+              <span class="starups__content--link is-danger" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/circle-pause.svg" alt="" />
+                </span>
+                on hold
+              </span>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/kybercore.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                Next level plug and play chassis systems for custom DIY
+                lightsaber builds.
+              </p>
+              <span class="starups__content--link is-danger" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/circle-pause.svg" alt="" />
+                </span>
+                on hold
+              </span>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/basin.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                A powerful, easy-to-configure form backend for designers and
+                developers.
+              </p>
+              <span class="starups__content--link is-success" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/handshake.svg" alt="" />
+                </span>
+                exited in 2024
+              </span>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/dovetail.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                A space and member management solution for coworking
+                communities.
+              </p>
+              <span class="starups__content--link is-success" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/handshake.svg" alt="" />
+                </span>
+                acquired in 2017
+              </span>
+            </div>
+            <div class="starups__content--item">
+              <img
+                class="starups__content--img"
+                src="./assets/img/userforge.svg"
+                alt=""
+              />
+              <p class="starups__content--description">
+                A collaborative tool for creating simple, effective user
+                personas.
+              </p>
+              <span class="starups__content--link is-success" href="">
+                <span class="starups__content--link-icon">
+                  <img src="./assets/img/handshake.svg" alt="" />
+                </span>
+                acquired in 2016
+              </span>
+            </div>
+          </div>
+
+          <div class="starups__content--callout">
+            <h1 class="starups__content--title">
+              Interested in collaborating with me?
+            </h1>
+            <p class="starups__content--subtitle">
+              I’m always open to discussing product design work or partnership
+              opportunities.
+            </p>
+
+            <div class="button">
+              <a class="button-link" href="">
+                <span>Start a conversation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonials">
+      <div class="container">
+        <div class="testimonials__content">
+          <input type="radio" id="carousel-1" name="carousel" checked />
+          <input type="radio" id="carousel-2" name="carousel" />
+
+          <h1 class="testimonials__content--title">Testimonials</h1>
+          <p class="testimonials__content--subtitle">
+            People I've worked with have said some nice things...
+          </p>
+          <div class="testimonials__content--carousel">
+            <div class="testimonials__content--inner">
+              <div class="testimonials__content--item">
+                <img
+                  class="testimonials__content--item-img"
+                  src="./assets/img/pascal.png"
+                />
+                <p class="testimonials__content--description">
+                  “Matt was a real pleasure to work with and we look forward to
+                  working with him again. He’s definitely the kind of designer
+                  you can trust with a project from start to finish.”
+                </p>
+                <h1 class="testimonials__content--item-title">
+                  Pascal Tremblay
+                </h1>
+                <p class="testimonials__content--item-subtitle">
+                  Creative Lead, Good Kind
+                </p>
+              </div>
+              <div class="testimonials__content--item">
+                <img
+                  class="testimonials__content--item-img"
+                  src="./assets/img/alvin.png"
+                />
+                <p class="testimonials__content--description">
+                  “Matt's a clear communicator with the tenacity and confidence
+                  to really dig in to tricky design scenarios and the
+                  collaborative friction that's needed to produce excellent
+                  work.”
+                </p>
+                <h1 class="testimonials__content--item-title">Alvin Engler</h1>
+                <p class="testimonials__content--item-subtitle">
+                  CEO, West Third Enterprises, Inc.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__content--nav">
+            <label
+              for="carousel-1"
+              class="testimonials__content--nav-dot"
+              for=""
+            ></label>
+            <label
+              for="carousel-2"
+              class="testimonials__content--nav-dot"
+              for=""
+            ></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact" class="actions">
+      <div class="container">
+        <div class="actions__content">
+          <div class="actions__content--box">
+            <h1 class="actions__content--title">Start a project</h1>
+            <p class="actions__content--description">
+              Interested in working together? We should queue up a time to chat.
+              I’ll buy the coffee.
+            </p>
+            <div class="actions__content--button">
+              <a href="" class="actions__content--link">
+                <span>Let's do this</span>
+              </a>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <a href="">
+              <img src="./assets/img/white-logo.svg" alt="" />
+            </a>
+          </div>
+
+          <p class="footer__content--description">
+            Living, learning, & leveling up one day at a time.
+          </p>
+
+          <div class="footer__social">
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/twitter.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/white-dribbble.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/linkedin-in.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/indie-hackers.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/product-hunt.svg" alt="" />
+            </a>
+            <a href="" class="footer__social--link">
+              <img src="./assets/img/envelope.svg" alt="" />
+            </a>
+          </div>
+          <p class="footer__content--copyright">
+            Handcrafted by me
+            <img src="./assets/img/copyright.svg" alt="" /> twentytwentyfour
+          </p>
+
+          <a href="" class="footer__content--attribution">
+            <img src="./assets/img/made-with-bulma--white.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
